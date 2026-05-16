@@ -1,4 +1,4 @@
-package org.amnezia.vpn.util
+package org.russia.leninvpn.util
 
 import org.json.JSONArray
 import org.json.JSONObject

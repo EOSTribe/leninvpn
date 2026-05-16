@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol.xray
+package org.russia.leninvpn.protocol.xray
 
 import android.content.Context
 import android.net.VpnService.Builder
@@ -8,20 +8,20 @@ import java.net.InetAddress
 import java.net.ServerSocket
 import java.util.UUID
 import go.Seq
-import org.amnezia.vpn.protocol.BadConfigException
-import org.amnezia.vpn.protocol.Protocol
-import org.amnezia.vpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.vpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.vpn.protocol.Statistics
-import org.amnezia.vpn.protocol.VpnStartException
-import org.amnezia.vpn.protocol.xray.libXray.DialerController
-import org.amnezia.vpn.protocol.xray.libXray.LibXray
-import org.amnezia.vpn.protocol.xray.libXray.Logger
-import org.amnezia.vpn.protocol.xray.libXray.Tun2SocksConfig
-import org.amnezia.vpn.util.Log
-import org.amnezia.vpn.util.net.InetNetwork
-import org.amnezia.vpn.util.net.ip
-import org.amnezia.vpn.util.net.parseInetAddress
+import org.russia.leninvpn.protocol.BadConfigException
+import org.russia.leninvpn.protocol.Protocol
+import org.russia.leninvpn.protocol.ProtocolState.CONNECTED
+import org.russia.leninvpn.protocol.ProtocolState.DISCONNECTED
+import org.russia.leninvpn.protocol.Statistics
+import org.russia.leninvpn.protocol.VpnStartException
+import org.russia.leninvpn.protocol.xray.libXray.DialerController
+import org.russia.leninvpn.protocol.xray.libXray.LibXray
+import org.russia.leninvpn.protocol.xray.libXray.Logger
+import org.russia.leninvpn.protocol.xray.libXray.Tun2SocksConfig
+import org.russia.leninvpn.util.Log
+import org.russia.leninvpn.util.net.InetNetwork
+import org.russia.leninvpn.util.net.ip
+import org.russia.leninvpn.util.net.parseInetAddress
 import org.json.JSONArray
 import org.json.JSONObject
 

@@ -1,4 +1,4 @@
-package org.amnezia.vpn.protocol
+package org.russia.leninvpn.protocol
 
 import android.os.Bundle
 

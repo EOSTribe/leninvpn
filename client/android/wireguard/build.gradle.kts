@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.amnezia.vpn.protocol.wireguard"
+    namespace = "org.russia.leninvpn.protocol.wireguard"
 }
 
 dependencies {
