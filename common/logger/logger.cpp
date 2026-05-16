@@ -144,7 +144,7 @@ QString Logger::getLogFile()
     QString qtLog = file.readAll();
 
 #ifdef Q_OS_IOS
-    return QString().fromStdString(AmneziaVPN::swiftUpdateLogData(qtLog.toStdString()));
+    return QString().fromStdString(LeninVPN::swiftUpdateLogData(qtLog.toStdString()));
 #else
     return qtLog;
 #endif
@@ -159,7 +159,7 @@ QString Logger::getServiceLogFile()
     QString qtLog = file.readAll();
 
 #ifdef Q_OS_IOS
-    return QString().fromStdString(AmneziaVPN::swiftUpdateLogData(qtLog.toStdString()));
+    return QString().fromStdString(LeninVPN::swiftUpdateLogData(qtLog.toStdString()));
 #else
     return qtLog;
 #endif
@@ -190,7 +190,7 @@ void Logger::clearLogs(bool isServiceLogger)
     file.close();
 
 #ifdef Q_OS_IOS
-    AmneziaVPN::swiftDeleteLog();
+    LeninVPN::swiftDeleteLog();
 #endif
 
     if (isLogActive) {
