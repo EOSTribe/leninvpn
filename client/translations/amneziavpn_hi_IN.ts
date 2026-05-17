@@ -1563,8 +1563,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="177"/>
-        <source>About AmneziaVPN</source>
-        <translation>AmneziaVPN के बारे में</translation>
+        <source>About LeninVPN</source>
+        <translation>LeninVPN के बारे में</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="188"/>
@@ -1581,13 +1581,13 @@ Already installed containers were found on the server. All installed containers 
     <name>PageSettingsAbout</name>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="61"/>
-        <source>Support Amnezia</source>
-        <translation>Amnezia का समर्थन करें</translation>
+        <source>Support us</source>
+        <translation>हमारा समर्थन करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="76"/>
-        <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>एमनेज़िया एक निःशुल्क और ओपन-सोर्स एप्लिकेशन है। यदि आपको यह पसंद है तो आप डेवलपर्स का समर्थन कर सकते हैं।.</translation>
+        <source>LeninVPN is an open-source application based on AmneziaVPN.</source>
+        <translation>LeninVPN एक ओपन-सोर्स एप्लिकेशन है जो AmneziaVPN पर आधारित है।</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="86"/>
@@ -1606,7 +1606,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/amnezia_vpn_en</source>
+        <source>https://t.me/lenin_vpn</source>
         <translation></translation>
     </message>
     <message>
@@ -1615,7 +1615,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
-        <source>support@amnezia.org</source>
+        <source>support@leninvpn.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1629,7 +1629,7 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
-        <source>mailto:support@amnezia.org</source>
+        <source>mailto:support@leninvpn.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1644,8 +1644,8 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="215"/>
-        <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <source>https://github.com/EOSTribe/leninvpn</source>
+        <translation>https://github.com/EOSTribe/leninvpn</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="222"/>
