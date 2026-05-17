@@ -281,7 +281,7 @@ PageType {
         property string description: qsTr("The easiest way to connect to the VPN")
         property string imageSource: "qrc:/images/controls/amnezia.svg"
         property bool featuredAmneziaConnection: true
-        property bool isVisible: true
+        property bool isVisible: false
         property var handler: function() {
             PageController.showBusyIndicator(true)
             var result = ApiConfigsController.fillAvailableServices()
@@ -367,7 +367,7 @@ PageType {
         property string title: qsTr("Restore purchases")
         property string description: qsTr("")
         property string imageSource: "qrc:/images/controls/refresh-cw.svg"
-        property bool isVisible: Qt.platform.os === "ios" || IsMacOsNeBuild
+        property bool isVisible: false
         property var handler: function() {
             PageController.showBusyIndicator(true)
             ApiConfigsController.restoreServiceFromAppStore()
