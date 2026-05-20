@@ -13,11 +13,11 @@ private const val APPLICATION_ID = "org.russia.LeninVPN"
 enum class VpnProto(
     val label: String,
     val processName: String,
-    val serviceClass: Class<out AmneziaVpnService>
+    val serviceClass: Class<out LeninVpnService>
 ) {
     WIREGUARD(
         "WireGuard",
-        "${APPLICATION_ID}:amneziaAwgService",
+        "${APPLICATION_ID}:leninvpnAwgService",
         AwgService::class.java
     ) {
         override fun createProtocol(): Protocol = Wireguard()
@@ -25,7 +25,7 @@ enum class VpnProto(
 
     AWG(
         "AmneziaWG",
-        "${APPLICATION_ID}:amneziaAwgService",
+        "${APPLICATION_ID}:leninvpnAwgService",
         AwgService::class.java
     ) {
         override fun createProtocol(): Protocol = Awg()
@@ -33,7 +33,7 @@ enum class VpnProto(
 
     OPENVPN(
         "OpenVPN",
-        "${APPLICATION_ID}:amneziaOpenVpnService",
+        "${APPLICATION_ID}:leninvpnOpenVpnService",
         OpenVpnService::class.java
     ) {
         override fun createProtocol(): Protocol = OpenVpn()
@@ -41,7 +41,7 @@ enum class VpnProto(
 
     CLOAK(
         "Cloak",
-        "${APPLICATION_ID}:amneziaOpenVpnService",
+        "${APPLICATION_ID}:leninvpnOpenVpnService",
         OpenVpnService::class.java
     ) {
         override fun createProtocol(): Protocol = Cloak()
@@ -49,7 +49,7 @@ enum class VpnProto(
 
     XRAY(
         "XRay",
-        "${APPLICATION_ID}:amneziaXrayService",
+        "${APPLICATION_ID}:leninvpnXrayService",
         XrayService::class.java
     ) {
         override fun createProtocol(): Protocol = Xray.instance
@@ -57,7 +57,7 @@ enum class VpnProto(
 
     SSXRAY(
         "SSXRay",
-        "${APPLICATION_ID}:amneziaXrayService",
+        "${APPLICATION_ID}:leninvpnXrayService",
         XrayService::class.java
     ) {
         override fun createProtocol(): Protocol = Xray.instance

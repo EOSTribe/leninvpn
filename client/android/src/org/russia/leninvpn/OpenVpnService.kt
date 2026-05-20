@@ -1,3 +1,3 @@
 package org.russia.leninvpn
 
-class OpenVpnService : AmneziaVpnService()
+class OpenVpnService : LeninVpnService()

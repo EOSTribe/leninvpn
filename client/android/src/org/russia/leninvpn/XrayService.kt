@@ -1,3 +1,3 @@
 package org.russia.leninvpn
 
-class XrayService : AmneziaVpnService()
+class XrayService : LeninVpnService()

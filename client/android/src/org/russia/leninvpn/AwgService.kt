@@ -1,3 +1,3 @@
 package org.russia.leninvpn
 
-class AwgService : AmneziaVpnService()
+class AwgService : LeninVpnService()

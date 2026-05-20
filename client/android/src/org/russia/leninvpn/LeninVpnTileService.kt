@@ -28,10 +28,10 @@ import org.russia.leninvpn.protocol.ProtocolState.RECONNECTING
 import org.russia.leninvpn.protocol.ProtocolState.UNKNOWN
 import org.russia.leninvpn.util.Log
 
-private const val TAG = "AmneziaTileService"
-private const val DEFAULT_TILE_LABEL = "AmneziaVPN"
+private const val TAG = "LeninVpnTileService"
+private const val DEFAULT_TILE_LABEL = "LeninVPN"
 
-class AmneziaTileService : TileService() {
+class LeninVpnTileService : TileService() {
 
     private lateinit var scope: CoroutineScope
     private var vpnStateListeningJob: Job? = null
@@ -71,7 +71,7 @@ class AmneziaTileService : TileService() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.d(TAG, "Create Amnezia Tile Service")
+        Log.d(TAG, "Create LeninVPN Tile Service")
         scope = CoroutineScope(SupervisorJob())
         vpnServiceMessenger = IpcMessenger(
             "VpnService",
@@ -80,7 +80,7 @@ class AmneziaTileService : TileService() {
     }
 
     override fun onDestroy() {
-        Log.d(TAG, "Destroy Amnezia Tile Service")
+        Log.d(TAG, "Destroy LeninVPN Tile Service")
         doUnbindService()
         scope.cancel()
         super.onDestroy()
@@ -91,7 +91,7 @@ class AmneziaTileService : TileService() {
         try {
             super.onBind(intent)
         } catch (e: Throwable) {
-            Log.e(TAG, "Failed to bind AmneziaTileService: $e")
+            Log.e(TAG, "Failed to bind LeninVpnTileService: $e")
             null
         }
 
@@ -101,7 +101,7 @@ class AmneziaTileService : TileService() {
             Log.d(TAG, "Start listening")
             vpnProto = VpnStateStore.getVpnState().vpnProto
             vpnProto.also { proto ->
-                if (proto != null && AmneziaVpnService.isRunning(applicationContext, proto.processName)) {
+                if (proto != null && LeninVpnService.isRunning(applicationContext, proto.processName)) {
                     Log.d(TAG, "Vpn service is running")
                     doBindService()
                 } else {
@@ -145,7 +145,7 @@ class AmneziaTileService : TileService() {
             }
         } else {
             Log.d(TAG, "Start Activity")
-            Intent(this, AmneziaActivity::class.java).apply {
+            Intent(this, LeninVpnActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             }.also {
                 startActivityAndCollapseCompat(it)
