@@ -1653,11 +1653,6 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <translation>用于功能讨论</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Mail</source>
         <translation type="vanished">邮件</translation>
     </message>
@@ -1715,6 +1710,11 @@ And if you don&apos;t like the app, all the more support it - the donation will 
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
         <source>Privacy Policy</source>
         <translation>隐私政策</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1667,9 +1667,8 @@ Thank you for staying with us!</source>
         <translation>Для обсуждения возможностей</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
         <source>https://t.me/lenin_vpn</source>
-        <translation>https://t.me/lenin_vpn</translation>
+        <translation type="vanished">https://t.me/lenin_vpn</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
@@ -1725,6 +1724,11 @@ Thank you for staying with us!</source>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
         <source>Privacy Policy</source>
         <translation>Политика конфиденциальности</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

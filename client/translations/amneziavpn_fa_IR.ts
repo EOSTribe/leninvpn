@@ -1681,13 +1681,22 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation>https://t.me/lenin_vpn</translation>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
         <source>support@leninvpn.org</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
+        <source>mailto:support@leninvpn.org</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>https://t.me/lenin_vpn</source>
+        <translation type="vanished">https://t.me/lenin_vpn</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1701,11 +1710,6 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <source>Copied</source>
         <translation type="obsolete">کپی شد</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
-        <source>mailto:support@leninvpn.org</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="211"/>

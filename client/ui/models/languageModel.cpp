@@ -120,12 +120,7 @@ LanguageSettings::AvailableLanguageEnum LanguageModel::getSystemLanguageEnum()
 
 QString LanguageModel::getCurrentSiteUrl(const QString &path)
 {
-    auto language = static_cast<LanguageSettings::AvailableLanguageEnum>(getCurrentLanguageIndex());
-    switch (language) {
-    case LanguageSettings::AvailableLanguageEnum::Russian:
-        return "https://storage.googleapis.com/amnezia/amnezia.org" + (path.isEmpty() ? "" : (QString("?m-path=/%1").arg(path)));
-    default: return QString("https://amnezia.org") + (path.isEmpty() ? "" : (QString("/%1").arg(path)));
-    }
+    return QString("https://leninvpn.org") + (path.isEmpty() ? "" : (QString("/%1").arg(path)));
 }
 
 QString LanguageModel::getCurrentDocsUrl(const QString &path)

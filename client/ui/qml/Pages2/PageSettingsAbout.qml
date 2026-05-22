@@ -58,7 +58,7 @@ PageType {
                 Layout.leftMargin: 16
                 Layout.rightMargin: 16
 
-                text: qsTr("Support Amnezia")
+                text: qsTr("Support us")
                 horizontalAlignment: Text.AlignHCenter
             }
 
@@ -73,7 +73,7 @@ PageType {
                 height: 20
                 font.pixelSize: 14
 
-                text: qsTr("Amnezia is a free and open-source application. You can support the developers if you like it.")
+                text: qsTr("LeninVPN is an open-source application based on AmneziaVPN.")
                 color: AmneziaStyle.color.paleGray
             }
 
@@ -197,11 +197,11 @@ PageType {
     QtObject {
         id: mail
 
-        readonly property string title: qsTr("support@amnezia.org")
+        readonly property string title: qsTr("support@leninvpn.org")
         readonly property string description: qsTr("For reviews and bug reports")
         readonly property string imageSource: "qrc:/images/controls/mail.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("mailto:support@amnezia.org"))
+            Qt.openUrlExternally(qsTr("mailto:support@leninvpn.org"))
         }
     }
 
@@ -212,7 +212,7 @@ PageType {
         readonly property string description: qsTr("Discover the source code")
         readonly property string imageSource: "qrc:/images/controls/github.svg"
         readonly property var handler: function() {
-            Qt.openUrlExternally(qsTr("https://github.com/amnezia-vpn/amnezia-client"))
+            Qt.openUrlExternally(qsTr("https://github.com/EOSTribe/leninvpn"))
         }
     }
 

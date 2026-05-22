@@ -1605,18 +1605,8 @@ Already installed containers were found on the server. All installed containers 
         <translation>सुविधाओं पर चर्चा करना</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Mail</source>
         <translation type="vanished">मेल</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
-        <source>support@leninvpn.org</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="201"/>
@@ -1626,6 +1616,11 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <source>Copied</source>
         <translation type="obsolete">कॉपी किया गया</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
+        <source>support@leninvpn.org</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
@@ -1671,6 +1666,11 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
         <source>Privacy Policy</source>
         <translation>गोपनीयता नीति</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

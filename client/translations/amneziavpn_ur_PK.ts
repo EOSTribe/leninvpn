@@ -1609,11 +1609,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>&quot;فیچرز&quot; پر گفتگو کرنے کے لئے</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Mail</source>
         <translation type="vanished">میل</translation>
     </message>
@@ -1671,6 +1666,11 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
         <source>Privacy Policy</source>
         <translation>رازداری کی پالیسی</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1762,9 +1762,13 @@ Already installed containers were found on the server. All installed containers 
         <translation type="vanished">Показати інші способи на Github</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="76"/>
         <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>Amnezia — це безкоштовний додаток з відкритим кодом. Якщо вам подобається цей додаток, ви можете підтримати розробників.</translation>
+        <translation type="vanished">Amnezia — це безкоштовний додаток з відкритим кодом. Якщо вам подобається цей додаток, ви можете підтримати розробників.</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="76"/>
+        <source>LeninVPN is an open-source application based on AmneziaVPN.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="86"/>
@@ -1783,13 +1787,22 @@ Already installed containers were found on the server. All installed containers 
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation>https://t.me/lenin_vpn</translation>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="200"/>
         <source>support@leninvpn.org</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
+        <source>mailto:support@leninvpn.org</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>https://t.me/lenin_vpn</source>
+        <translation type="vanished">https://t.me/lenin_vpn</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1803,11 +1816,6 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <source>Copied</source>
         <translation type="obsolete">Скопійовано</translation>
-    </message>
-    <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="204"/>
-        <source>mailto:support@leninvpn.org</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="211"/>

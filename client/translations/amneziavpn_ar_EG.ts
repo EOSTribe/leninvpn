@@ -1617,11 +1617,6 @@ Already installed containers were found on the server. All installed containers 
         <translation>لمناقشة الميزات</translation>
     </message>
     <message>
-        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
-        <source>https://t.me/lenin_vpn</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Mail</source>
         <translation type="vanished">البريد</translation>
     </message>
@@ -1679,6 +1674,11 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="170"/>
         <source>Privacy Policy</source>
         <translation>سياسات الخصوصية</translation>
+    </message>
+    <message>
+        <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="193"/>
+        <source>https://t.me/amnezia_vpn_en</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
