@@ -26,7 +26,7 @@ plugins {
     id("settings-property-delegate")
 }
 
-rootProject.name = "AmneziaVPN"
+rootProject.name = "LeninVPN"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(":qt")

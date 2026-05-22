@@ -7,16 +7,16 @@ import org.russia.leninvpn.util.Log
 import org.russia.leninvpn.util.Prefs
 import org.qtproject.qt.android.bindings.QtApplication
 
-private const val TAG = "AmneziaApplication"
+private const val TAG = "LeninVpnApplication"
 
-class AmneziaApplication : QtApplication(), CameraXConfig.Provider {
+class LeninVpnApplication : QtApplication(), CameraXConfig.Provider {
 
     override fun onCreate() {
         super.onCreate()
         Prefs.init(this)
         Log.init(this)
         VpnStateStore.init(this)
-        Log.d(TAG, "Create Amnezia application")
+        Log.d(TAG, "Create LeninVPN application")
         ServiceNotification.createNotificationChannel(this)
     }
 

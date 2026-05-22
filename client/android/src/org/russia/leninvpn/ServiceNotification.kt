@@ -50,7 +50,7 @@ class ServiceNotification(private val context: Context) {
             PendingIntent.getActivity(
                 context,
                 GET_ACTIVITY_REQUEST_CODE,
-                Intent(context, AmneziaActivity::class.java),
+                Intent(context, LeninVpnActivity::class.java),
                 PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
             )
         )
@@ -65,8 +65,8 @@ class ServiceNotification(private val context: Context) {
         Log.v(TAG, "Build notification: $serverName, $state")
 
         return notificationBuilder
-            .setSmallIcon(R.drawable.ic_amnezia_round)
-            .setContentTitle((serverName ?: "AmneziaVPN") + (protocol?.let { " $it" } ?: ""))
+            .setSmallIcon(R.drawable.ic_leninvpn_round)
+            .setContentTitle((serverName ?: "LeninVPN") + (protocol?.let { " $it" } ?: ""))
             .setContentText(context.getString(state))
             .setSubText(speedString)
             .setWhen(System.currentTimeMillis())
@@ -158,7 +158,7 @@ class ServiceNotification(private val context: Context) {
                         .setSound(null, null)
                         .setVibrationEnabled(false)
                         .setLightsEnabled(false)
-                        .setName("AmneziaVPN")
+                        .setName("LeninVPN")
                         .setDescription(context.resources.getString(R.string.notificationChannelDescription))
                         .build()
                 )

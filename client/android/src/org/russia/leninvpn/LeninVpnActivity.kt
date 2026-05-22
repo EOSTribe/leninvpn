@@ -66,7 +66,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import org.qtproject.qt.android.bindings.QtActivity
 
-private const val TAG = "AmneziaActivity"
+private const val TAG = "LeninVpnActivity"
 const val ACTIVITY_MESSENGER_NAME = "Activity"
 
 private const val CHECK_VPN_PERMISSION_ACTION_CODE = 1
@@ -78,7 +78,7 @@ private const val PREFS_NOTIFICATION_PERMISSION_ASKED = "NOTIFICATION_PERMISSION
 private const val OPEN_FILE_AFTER_RESUME_DELAY_MS = 400L
 private const val KEY_PENDING_OPEN_FILE_URI = "pending_open_file_uri"
 
-class AmneziaActivity : QtActivity() {
+class LeninVpnActivity : QtActivity() {
 
     private lateinit var mainScope: CoroutineScope
     private val qtInitialized = CompletableDeferred<Unit>()
@@ -183,7 +183,7 @@ class AmneziaActivity : QtActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "Create Amnezia activity")
+        Log.d(TAG, "Create LeninVPN activity")
         loadLibs()
 
         // Configure window for edge-to-edge display
@@ -265,11 +265,11 @@ class AmneziaActivity : QtActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "Start Amnezia activity")
+        Log.d(TAG, "Start LeninVPN activity")
         mainScope.launch {
             qtInitialized.await()
             vpnProto?.let { proto ->
-                if (AmneziaVpnService.isRunning(applicationContext, proto.processName)) {
+                if (LeninVpnService.isRunning(applicationContext, proto.processName)) {
                     doBindService()
                 }
             }
@@ -282,7 +282,7 @@ class AmneziaActivity : QtActivity() {
         // Cancel all pending operations when activity stops
         resumeHandler.removeCallbacksAndMessages(null)
         openFileDeliveryScheduled = false
-        Log.d(TAG, "Stop Amnezia activity")
+        Log.d(TAG, "Stop LeninVPN activity")
         doUnbindService()
         mainScope.launch {
             qtInitialized.await()
@@ -365,13 +365,13 @@ class AmneziaActivity : QtActivity() {
         // Cancel all pending operations when activity pauses
         resumeHandler.removeCallbacksAndMessages(null)
         openFileDeliveryScheduled = false
-        Log.d(TAG, "Pause Amnezia activity")
+        Log.d(TAG, "Pause LeninVPN activity")
     }
 
     override fun onResume() {
         super.onResume()
         isActivityResumed = true
-        Log.d(TAG, "Resume Amnezia activity")
+        Log.d(TAG, "Resume LeninVPN activity")
         if (qtInitialized.isCompleted) {
             QtAndroidController.onActivityResumed()
         }
@@ -482,7 +482,7 @@ class AmneziaActivity : QtActivity() {
         hasWindowFocus = false
         // Cancel all pending operations when activity is destroyed
         resumeHandler.removeCallbacksAndMessages(null)
-        Log.d(TAG, "Destroy Amnezia activity")
+        Log.d(TAG, "Destroy LeninVPN activity")
         unregisterBroadcastReceiver(notificationStateReceiver)
         notificationStateReceiver = null
         mainScope.cancel()
@@ -562,7 +562,7 @@ class AmneziaActivity : QtActivity() {
             startActivityForResult(intent, CHECK_VPN_PERMISSION_ACTION_CODE, ActivityResultHandler(
                 onSuccess = {
                     Log.d(TAG, "Vpn permission granted")
-                    Toast.makeText(this@AmneziaActivity, resources.getText(R.string.vpnGranted), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LeninVpnActivity, resources.getText(R.string.vpnGranted), Toast.LENGTH_LONG).show()
                     onPermissionGranted()
                 },
                 onFail = {
@@ -756,7 +756,7 @@ class AmneziaActivity : QtActivity() {
                         }
                     ))
                 } catch (_: ActivityNotFoundException) {
-                    Toast.makeText(this@AmneziaActivity, "Unsupported", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LeninVpnActivity, "Unsupported", Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -794,7 +794,7 @@ class AmneziaActivity : QtActivity() {
                     }
                 }
             } else {
-                Intent(this@AmneziaActivity, TvFilePicker::class.java)
+                Intent(this@LeninVpnActivity, TvFilePicker::class.java)
             }
 
             try {
@@ -1054,7 +1054,7 @@ class AmneziaActivity : QtActivity() {
         Log.v(TAG, "Request authentication")
         mainScope.launch {
             qtInitialized.await()
-            Intent(this@AmneziaActivity, AuthActivity::class.java).also {
+            Intent(this@LeninVpnActivity, AuthActivity::class.java).also {
                 startActivity(it)
             }
         }
