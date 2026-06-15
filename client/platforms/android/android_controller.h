@@ -18,7 +18,7 @@ public:
 
     bool initialize();
 
-    // keep synchronized with org.russia.leninvpn.protocol.ProtocolState
+    // keep synchronized with org.amnezia.leninvpn.protocol.ProtocolState
     enum class ConnectionState
     {
         DISCONNECTED,

@@ -17,7 +17,7 @@ val qtTargetAbiList: String by gradleProperties
 val outputBaseName: String by gradleProperties
 
 android {
-    namespace = "org.russia.leninvpn"
+    namespace = "org.amnezia.leninvpn"
 
     buildFeatures {
         viewBinding = true
@@ -34,7 +34,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "org.russia.LeninVPN"
+        applicationId = "org.amnezia.LeninVPN"
         targetSdk = qtTargetSdkVersion.toInt()
 
         // keeps language resources for only the locales specified below

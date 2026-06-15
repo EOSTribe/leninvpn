@@ -1,9 +1,9 @@
-package org.russia.leninvpn.protocol.cloak
+package org.amnezia.leninvpn.protocol.cloak
 
 import android.util.Base64
 import net.openvpn.ovpn3.ClientAPI_Config
-import org.russia.leninvpn.protocol.openvpn.OpenVpn
-import org.russia.leninvpn.util.LibraryLoader.loadSharedLibrary
+import org.amnezia.leninvpn.protocol.openvpn.OpenVpn
+import org.amnezia.leninvpn.util.LibraryLoader.loadSharedLibrary
 import org.json.JSONObject
 
 class Cloak : OpenVpn() {

@@ -70,7 +70,7 @@
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>com.wireguard.ios.app_group_id</key>
-	<string>group.org.russia.LeninVPN</string>
+	<string>group.org.amnezia.LeninVPN</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
@@ -98,7 +98,7 @@
 			<key>UTTypeIconFiles</key>
 			<array/>
 			<key>UTTypeIdentifier</key>
-			<string>org.russia.LeninVPN.amnezia-config</string>
+			<string>org.amnezia.LeninVPN.amnezia-config</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -121,7 +121,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.russia.LeninVPN.wireguard-config</string>
+                        <string>org.amnezia.LeninVPN.wireguard-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -145,7 +145,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.russia.LeninVPN.openvpn-config</string>
+                        <string>org.amnezia.LeninVPN.openvpn-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -168,7 +168,7 @@
                         <key>UTTypeIconFiles</key>
                         <array/>
                         <key>UTTypeIdentifier</key>
-                        <string>org.russia.LeninVPN.backup-config</string>
+                        <string>org.amnezia.LeninVPN.backup-config</string>
                         <key>UTTypeTagSpecification</key>
                         <dict>
                                 <key>public.filename-extension</key>
@@ -191,10 +191,10 @@
                         <string>Alternate</string>
                         <key>LSItemContentTypes</key>
                         <array>
-                                <string>org.russia.LeninVPN.amnezia-config</string>
-                                <string>org.russia.LeninVPN.wireguard-config</string>
-                                <string>org.russia.LeninVPN.openvpn-config</string>
-                                <string>org.russia.LeninVPN.backup-config</string>
+                                <string>org.amnezia.LeninVPN.amnezia-config</string>
+                                <string>org.amnezia.LeninVPN.wireguard-config</string>
+                                <string>org.amnezia.LeninVPN.openvpn-config</string>
+                                <string>org.amnezia.LeninVPN.backup-config</string>
                         </array>
                 </dict>
         </array>

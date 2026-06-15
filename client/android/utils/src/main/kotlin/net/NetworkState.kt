@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util.net
+package org.amnezia.leninvpn.util.net
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -13,7 +13,7 @@ import android.os.Handler
 import androidx.core.content.getSystemService
 import kotlin.LazyThreadSafetyMode.NONE
 import kotlinx.coroutines.delay
-import org.russia.leninvpn.util.Log
+import org.amnezia.leninvpn.util.Log
 
 private const val TAG = "NetworkState"
 

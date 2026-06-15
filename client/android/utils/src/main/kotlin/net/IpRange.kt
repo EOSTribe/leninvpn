@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util.net
+package org.amnezia.leninvpn.util.net
 
 import java.net.InetAddress
 

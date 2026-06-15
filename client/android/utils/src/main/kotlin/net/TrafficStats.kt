@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util.net
+package org.amnezia.leninvpn.util.net
 
 import android.net.TrafficStats
 import android.os.Build

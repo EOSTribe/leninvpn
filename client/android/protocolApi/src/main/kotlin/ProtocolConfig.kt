@@ -1,12 +1,12 @@
-package org.russia.leninvpn.protocol
+package org.amnezia.leninvpn.protocol
 
 import android.net.ProxyInfo
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.net.InetAddress
-import org.russia.leninvpn.util.net.InetNetwork
-import org.russia.leninvpn.util.net.IpRange
-import org.russia.leninvpn.util.net.IpRangeSet
+import org.amnezia.leninvpn.util.net.InetNetwork
+import org.amnezia.leninvpn.util.net.IpRange
+import org.amnezia.leninvpn.util.net.IpRangeSet
 
 open class ProtocolConfig protected constructor(
     val addresses: Set<InetNetwork>,

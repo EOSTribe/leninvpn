@@ -1,7 +1,7 @@
-package org.russia.leninvpn.protocol.xray
+package org.amnezia.leninvpn.protocol.xray
 
-import org.russia.leninvpn.protocol.ProtocolConfig
-import org.russia.leninvpn.util.net.InetNetwork
+import org.amnezia.leninvpn.protocol.ProtocolConfig
+import org.amnezia.leninvpn.util.net.InetNetwork
 
 private const val XRAY_DEFAULT_MTU = 1500
 private const val XRAY_DEFAULT_MAX_MEMORY: Long = 50 shl 20 // 50 MB

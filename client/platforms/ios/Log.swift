@@ -2,7 +2,7 @@ import Foundation
 import os.log
 
 struct Log {
-  private static let subsystemIdentifier = Bundle.main.bundleIdentifier ?? "org.russia.LeninVPN"
+  private static let subsystemIdentifier = Bundle.main.bundleIdentifier ?? "org.amnezia.LeninVPN"
   static let osLog = Logger(subsystem: subsystemIdentifier, category: "App")
 
   private static let IsLoggingEnabledKey = "IsLoggingEnabled"
@@ -15,7 +15,7 @@ struct Log {
     }
   }
 
-  private static let appGroupID = "group.org.russia.LeninVPN"
+  private static let appGroupID = "group.org.amnezia.LeninVPN"
 
   static let appLogURL = {
     let sharedContainerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupID)!

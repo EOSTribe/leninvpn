@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.russia.leninvpn.protocol.xray"
+    namespace = "org.amnezia.leninvpn.protocol.xray"
 }
 
 dependencies {

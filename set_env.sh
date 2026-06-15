@@ -1,0 +1,12 @@
+#!/bin/sh
+
+export QT_BIN_DIR=/Users/eluzgin/Qt/6.11.0/ios/bin
+export QT_MACOS_ROOT_DIR=/Users/eluzgin/Qt/6.11.0/macos 
+export QT_IOS_BIN=$QT_BIN_DIR
+export QT_HOST_PATH=/Users/eluzgin/Qt/6.11.0/macos
+export PATH=$PATH:~/go/bin
+export ANDROID_SDK_ROOT=/Users/eluzgin/Library/Android/sdk 
+export ANDROID_NDK_ROOT=/Users/eluzgin/Library/Android/sdk/ndk/26.1.10909125 
+
+export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+
