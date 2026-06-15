@@ -1,4 +1,4 @@
-package org.amnezia.leninvpn.protocol
+package org.leninvpn.leninvpn.protocol
 
 import android.content.Context
 import android.net.IpPrefix
@@ -8,8 +8,8 @@ import android.os.Build
 import android.system.OsConstants
 import androidx.annotation.RequiresApi
 import kotlinx.coroutines.flow.MutableStateFlow
-import org.amnezia.leninvpn.util.Log
-import org.amnezia.leninvpn.util.net.InetNetwork
+import org.leninvpn.leninvpn.util.Log
+import org.leninvpn.leninvpn.util.net.InetNetwork
 import org.json.JSONObject
 
 private const val TAG = "Protocol"

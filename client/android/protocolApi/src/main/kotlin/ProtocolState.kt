@@ -1,4 +1,4 @@
-package org.amnezia.leninvpn.protocol
+package org.leninvpn.leninvpn.protocol
 
 // keep synchronized with client/platforms/android/android_controller.h ConnectionState
 enum class ProtocolState {

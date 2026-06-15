@@ -14,7 +14,7 @@ echo "Build dir: ${BUILD_DIR}"
 
 APP_NAME=AmneziaVPN
 APP_FILENAME=$APP_NAME.app
-APP_DOMAIN=org.amnezia.leninvpn.package
+APP_DOMAIN=org.leninvpn.leninvpn.package
 PLIST_NAME=$APP_NAME.plist
 
 

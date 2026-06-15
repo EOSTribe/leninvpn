@@ -38,9 +38,9 @@
 	</dict>
 
 	<key>com.wireguard.ios.app_group_id</key>
-	<string>group.org.amnezia.LeninVPN</string>
+	<string>group.org.leninvpn.LeninVPN</string>
 
 	<key>com.wireguard.macos.app_group_id</key>
-	<string>$(DEVELOPMENT_TEAM).group.org.amnezia.LeninVPN</string>
+	<string>$(DEVELOPMENT_TEAM).group.org.leninvpn.LeninVPN</string>
 </dict>
 </plist>

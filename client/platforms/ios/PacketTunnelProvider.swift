@@ -12,7 +12,7 @@ enum TunnelProtoType: String {
 
 struct Constants {
   static let kDefaultPathKey = "defaultPath"
-  static let processQueueName = "org.amnezia.LeninVPN.process-packets"
+  static let processQueueName = "org.leninvpn.LeninVPN.process-packets"
   static let kActivationAttemptId = "activationAttemptId"
   static let ovpnConfigKey = "ovpn"
   static let xrayConfigKey = "xray"

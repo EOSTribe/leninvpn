@@ -1,4 +1,4 @@
-package org.amnezia.leninvpn.protocol.xray
+package org.leninvpn.leninvpn.protocol.xray
 
 import android.content.Context
 import android.net.VpnService.Builder
@@ -8,20 +8,20 @@ import java.net.InetAddress
 import java.net.ServerSocket
 import java.util.UUID
 import go.Seq
-import org.amnezia.leninvpn.protocol.BadConfigException
-import org.amnezia.leninvpn.protocol.Protocol
-import org.amnezia.leninvpn.protocol.ProtocolState.CONNECTED
-import org.amnezia.leninvpn.protocol.ProtocolState.DISCONNECTED
-import org.amnezia.leninvpn.protocol.Statistics
-import org.amnezia.leninvpn.protocol.VpnStartException
+import org.leninvpn.leninvpn.protocol.BadConfigException
+import org.leninvpn.leninvpn.protocol.Protocol
+import org.leninvpn.leninvpn.protocol.ProtocolState.CONNECTED
+import org.leninvpn.leninvpn.protocol.ProtocolState.DISCONNECTED
+import org.leninvpn.leninvpn.protocol.Statistics
+import org.leninvpn.leninvpn.protocol.VpnStartException
 import org.amnezia.vpn.protocol.xray.libXray.DialerController
 import org.amnezia.vpn.protocol.xray.libXray.LibXray
 import org.amnezia.vpn.protocol.xray.libXray.Logger
 import org.amnezia.vpn.protocol.xray.libXray.Tun2SocksConfig
-import org.amnezia.leninvpn.util.Log
-import org.amnezia.leninvpn.util.net.InetNetwork
-import org.amnezia.leninvpn.util.net.ip
-import org.amnezia.leninvpn.util.net.parseInetAddress
+import org.leninvpn.leninvpn.util.Log
+import org.leninvpn.leninvpn.util.net.InetNetwork
+import org.leninvpn.leninvpn.util.net.ip
+import org.leninvpn.leninvpn.util.net.parseInetAddress
 import org.json.JSONArray
 import org.json.JSONObject
 
