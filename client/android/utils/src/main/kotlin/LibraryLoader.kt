@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util
+package org.leninvpn.leninvpn.util
 
 import android.annotation.SuppressLint
 import android.content.Context

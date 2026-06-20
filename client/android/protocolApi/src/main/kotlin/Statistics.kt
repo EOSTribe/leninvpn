@@ -1,4 +1,4 @@
-package org.russia.leninvpn.protocol
+package org.leninvpn.leninvpn.protocol
 
 import android.os.Bundle
 

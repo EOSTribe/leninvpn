@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.russia.leninvpn.protocol.openvpn"
+    namespace = "org.leninvpn.leninvpn.protocol.openvpn"
 }
 
 dependencies {

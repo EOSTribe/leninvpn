@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util.net
+package org.leninvpn.leninvpn.util.net
 
 import android.content.Context
 import android.net.ConnectivityManager

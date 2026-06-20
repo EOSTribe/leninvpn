@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util
+package org.leninvpn.leninvpn.util
 
 import org.json.JSONArray
 import org.json.JSONObject

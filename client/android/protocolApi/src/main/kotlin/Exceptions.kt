@@ -1,4 +1,4 @@
-package org.russia.leninvpn.protocol
+package org.leninvpn.leninvpn.protocol
 
 sealed class ProtocolException(message: String? = null, cause: Throwable? = null) : Exception(message, cause)
 

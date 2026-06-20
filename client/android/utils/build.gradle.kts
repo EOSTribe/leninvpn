@@ -8,7 +8,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.russia.leninvpn.util"
+    namespace = "org.leninvpn.leninvpn.util"
 
     buildFeatures {
         // add BuildConfig class

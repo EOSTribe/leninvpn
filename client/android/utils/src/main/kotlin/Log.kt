@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util
+package org.leninvpn.leninvpn.util
 
 import android.content.Context
 import android.os.Build
@@ -13,12 +13,12 @@ import java.time.format.DateTimeFormatter
 import java.time.ZonedDateTime
 import java.time.ZoneOffset
 import java.util.concurrent.locks.ReentrantLock
-import org.russia.leninvpn.util.Log.Priority.D
-import org.russia.leninvpn.util.Log.Priority.E
-import org.russia.leninvpn.util.Log.Priority.F
-import org.russia.leninvpn.util.Log.Priority.I
-import org.russia.leninvpn.util.Log.Priority.V
-import org.russia.leninvpn.util.Log.Priority.W
+import org.leninvpn.leninvpn.util.Log.Priority.D
+import org.leninvpn.leninvpn.util.Log.Priority.E
+import org.leninvpn.leninvpn.util.Log.Priority.F
+import org.leninvpn.leninvpn.util.Log.Priority.I
+import org.leninvpn.leninvpn.util.Log.Priority.V
+import org.leninvpn.leninvpn.util.Log.Priority.W
 import android.util.Log as NativeLog
 
 private const val TAG = "Log"

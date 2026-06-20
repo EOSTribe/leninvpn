@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # shellcheck disable=SC2086
 
 set -o errexit -o nounset
@@ -46,7 +46,7 @@ while true; do
 done
 
 # Validate ABIS parameter
-if [[ -v ABIS && \
+if [[ ${ABIS+x} && \
     ! "$ABIS" = "all" && \
     ! "$ABIS" =~ ^((x86|x86_64|armeabi-v7a|arm64-v8a);)*(x86|x86_64|armeabi-v7a|arm64-v8a)$ ]]; then
   echo "The 'apk' option must be a list of ['x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a']" \
@@ -55,7 +55,7 @@ if [[ -v ABIS && \
 fi
 
 # At least one artifact type must be specified
-if [[ ! (-v AAB || -v ABIS) ]]; then
+if [[ ! (${AAB+x} || ${ABIS+x}) ]]; then
   usage; exit 0
 fi
 
@@ -72,7 +72,7 @@ echo "Project dir: $PROJECT_DIR"
 echo "Build dir: $BUILD_DIR"
 
 # Determine path to qt bin folder with qt-cmake
-if [[ -v AAB || "$ABIS" = "all" ]]; then
+if [[ ${AAB+x} || "$ABIS" = "all" ]]; then
   qt_bin_dir_suffix="x86_64"
 else
   if [[ $ABIS = *";"* ]]; then
@@ -100,7 +100,7 @@ echo "Using Android NDK in $ANDROID_NDK_ROOT"
 # Run qt-cmake to configure build
 qt_cmake_opts=()
 
-if [[ -v AAB || "$ABIS" = "all" ]]; then
+if [[ ${AAB+x} || "$ABIS" = "all" ]]; then
   qt_cmake_opts+=(-DQT_ANDROID_BUILD_ALL_ABIS=ON)
 else
   qt_cmake_opts+=(-DQT_ANDROID_ABIS="$ABIS")
@@ -111,7 +111,7 @@ fi
 $QT_BIN_DIR/qt-cmake -S $PROJECT_DIR -B $BUILD_DIR \
   -DQT_NO_GLOBAL_APK_TARGET_PART_OF_ALL=ON \
   -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
-  "${qt_cmake_opts[@]}"
+  "${qt_cmake_opts[@]+"${qt_cmake_opts[@]}"}"
 
 # Build app
 cmake --build $BUILD_DIR --config $BUILD_TYPE
@@ -121,11 +121,11 @@ echo "Building APK/AAB..."
 
 deployqt_opts=()
 
-if [ -v AAB ]; then
+if [ ${AAB+x} ]; then
   deployqt_opts+=(--aab)
 fi
 
-if [ -v ANDROID_BUILD_PLATFORM ]; then
+if [ ${ANDROID_BUILD_PLATFORM+x} ]; then
   deployqt_opts+=(--android-platform "$ANDROID_BUILD_PLATFORM")
 fi
 
@@ -140,48 +140,56 @@ export ANDROIDDEPLOYQT_RUN=1
 $QT_HOST_PATH/bin/androiddeployqt \
   --input $OUT_APP_DIR/android-AmneziaVPN-deployment-settings.json \
   --output $OUT_APP_DIR/android-build \
-  "${deployqt_opts[@]}"
+  "${deployqt_opts[@]+"${deployqt_opts[@]}"}"
+
+# androiddeployqt sets outputBaseName=android-build in the generated local.properties,
+# which overrides Gradle's default ABI-suffixed naming (LeninVPN-arm64-v8a-debug.apk).
+# Clear it so Gradle uses the default split naming.
+sed -i.bak 's/^outputBaseName=.*/outputBaseName=/' "$OUT_APP_DIR/android-build/local.properties"
 
 # run gradle
 gradle_opts=()
 
-if [ -v FDROID ]; then
+if [ ${FDROID+x} ]; then
   BUILD_TYPE="fdroid"
 fi
 
-if [ -v AAB ]; then
-  gradle_opts+=(bundle"${BUILD_TYPE^}")
+# Capitalize first letter portably (works in bash 3.2+)
+BUILD_TYPE_CAP="$(echo "${BUILD_TYPE:0:1}" | tr '[:lower:]' '[:upper:]')${BUILD_TYPE:1}"
+
+if [ ${AAB+x} ]; then
+  gradle_opts+=("bundle${BUILD_TYPE_CAP}")
 fi
-if [ -v ABIS ]; then
-  gradle_opts+=(assemble"${BUILD_TYPE^}")
+if [ ${ABIS+x} ]; then
+  gradle_opts+=("assemble${BUILD_TYPE_CAP}")
 fi
 
 $OUT_APP_DIR/android-build/gradlew \
   --project-dir $OUT_APP_DIR/android-build \
   -DexplicitRun=1 \
-  "${gradle_opts[@]}"
+  "${gradle_opts[@]+"${gradle_opts[@]}"}"
 
-if [[ -v CI || -v MOVE_RESULT ]]; then
+if [[ ${CI+x} || ${MOVE_RESULT+x} ]]; then
   echo "Moving APK/AAB..."
-  if [ -v AAB ]; then
-    mv -u $OUT_APP_DIR/android-build/build/outputs/bundle/$BUILD_TYPE/LeninVPN-$BUILD_TYPE.aab \
+  if [ ${AAB+x} ]; then
+    mv $OUT_APP_DIR/android-build/build/outputs/bundle/$BUILD_TYPE/LeninVPN-$BUILD_TYPE.aab \
        $PROJECT_DIR/deploy/build/
   fi
 
-  if [ -v ABIS ]; then
+  if [ ${ABIS+x} ]; then
     if [ "$ABIS" = "all" ]; then
       ABIS="x86;x86_64;armeabi-v7a;arm64-v8a"
     fi
 
     suffix=$BUILD_TYPE
-    if [ -v FDROID ]; then
+    if [ ${FDROID+x} ]; then
       suffix+="-unsigned"
     fi
 
     IFS=';' read -r -a abi_array <<< "$ABIS"
     for ABI in "${abi_array[@]}"
     do
-      mv -u $OUT_APP_DIR/android-build/build/outputs/apk/$BUILD_TYPE/LeninVPN-$ABI-$suffix.apk \
+      mv $OUT_APP_DIR/android-build/build/outputs/apk/$BUILD_TYPE/LeninVPN-$ABI-$suffix.apk \
        $PROJECT_DIR/deploy/build/
     done
   fi

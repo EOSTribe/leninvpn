@@ -1,4 +1,4 @@
-package org.russia.leninvpn.util.net
+package org.leninvpn.leninvpn.util.net
 
 import java.net.Inet4Address
 import java.net.InetAddress
