@@ -10,3 +10,8 @@ export ANDROID_NDK_ROOT=/Users/eluzgin/Library/Android/sdk/ndk/26.1.10909125
 
 export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
 
+export ANDROID_KEYSTORE_PATH="/Users/eluzgin/Development/amnezia-client/client/android/android-release-key.keystore"
+export ANDROID_KEYSTORE_KEY_ALIAS=leninvpn-key-alias
+export ANDROID_KEYSTORE_STORE_PASS=Jasmin.#13
+export ANDROID_KEYSTORE_KEY_PASS=Jasmin.#13
+
