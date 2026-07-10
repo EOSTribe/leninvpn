@@ -22,6 +22,7 @@ QtObject {
         readonly property color vibrantRed: '#EB5757'
         readonly property color darkCharcoal: '#261E1A'
         readonly property color pearlGray: '#EAEAEC'
+        readonly property color brightBlue: '#0A84FF'
 
         readonly property color sheerWhite: Qt.rgba(1, 1, 1, 0.12)
         readonly property color translucentWhite: Qt.rgba(1, 1, 1, 0.08)

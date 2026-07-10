@@ -126,6 +126,64 @@ PageType {
                 Layout.alignment: Qt.AlignCenter
             }
 
+            ColumnLayout {
+                id: subscriptionStatusColumn
+                objectName: "subscriptionStatusColumn"
+
+                Layout.alignment: Qt.AlignHCenter
+                Layout.bottomMargin: 8
+                spacing: 4
+
+                visible: SubscriptionStatusController.isAvailable
+
+                ParagraphTextType {
+                    objectName: "subscriptionDaysRemainingLabel"
+
+                    Layout.alignment: Qt.AlignHCenter
+
+                    visible: SubscriptionStatusController.isActive && SubscriptionStatusController.daysRemaining > 1
+                    text: qsTr("Days remaining: %1").arg(SubscriptionStatusController.daysRemaining)
+                }
+
+                ParagraphTextType {
+                    objectName: "subscriptionExpiresAtLabel"
+
+                    Layout.alignment: Qt.AlignHCenter
+
+                    visible: SubscriptionStatusController.isActive && SubscriptionStatusController.daysRemaining <= 1
+                    color: AmneziaStyle.color.goldenApricot
+                    text: qsTr("Expires: %1").arg(SubscriptionStatusController.expiresAtText)
+                }
+
+                ParagraphTextType {
+                    objectName: "subscriptionExpiredLabel"
+
+                    Layout.alignment: Qt.AlignHCenter
+
+                    visible: !SubscriptionStatusController.isActive
+                    color: AmneziaStyle.color.vibrantRed
+                    font.weight: 700
+                    text: qsTr("Expired!")
+                }
+
+                ParagraphTextType {
+                    id: subscribeLabel
+                    objectName: "subscriptionSubscribeLabel"
+
+                    Layout.alignment: Qt.AlignHCenter
+
+                    visible: SubscriptionStatusController.isExpiringSoon
+                    color: AmneziaStyle.color.brightBlue
+                    text: qsTr("Extend subscription")
+
+                    MouseArea {
+                        anchors.fill: parent
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: Qt.openUrlExternally(SubscriptionStatusController.subscribeUrl)
+                    }
+                }
+            }
+
             BasicButtonType {
                 id: splitTunnelingButton
                 objectName: "splitTunnelingButton"

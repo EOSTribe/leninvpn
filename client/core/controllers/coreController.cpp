@@ -165,6 +165,9 @@ void CoreController::initControllers()
 
     m_apiNewsController.reset(new ApiNewsController(m_newsModel, m_settings, m_serversModel, this));
     m_engine->rootContext()->setContextProperty("ApiNewsController", m_apiNewsController.get());
+
+    m_subscriptionStatusController.reset(new SubscriptionStatusController(m_serversModel, m_settings, this));
+    m_engine->rootContext()->setContextProperty("SubscriptionStatusController", m_subscriptionStatusController.get());
 }
 
 void CoreController::initAndroidController()
