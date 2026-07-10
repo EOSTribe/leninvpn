@@ -1,9 +1,13 @@
 # User settings
+client/android/android-release-key.keystore
 *.user
 macOSPackage/
 AmneziaVPN.dmg
 AmneziaVPN.exe
 AmneziaVPN_*.exe
+LeninVPN.dmg
+LeninVPN.exe
+LeninVPN_*.exe
 deploy/build/*
 deploy/build_32/*
 deploy/build_64/*
